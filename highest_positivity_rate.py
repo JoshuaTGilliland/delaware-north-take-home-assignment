@@ -25,7 +25,7 @@ def main():
         query = f"""
             SELECT DISTINCT
                 {args.stateFormat}
-                , (sum(positive_results) / sum(total_results)) AS pct
+                , (sum(positive_results) / sum(total_results) * 100) AS pct
             FROM (
                 SELECT DISTINCT
                     {args.stateFormat}
